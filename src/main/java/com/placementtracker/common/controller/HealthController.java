@@ -19,10 +19,10 @@ import java.util.Map;
 public class HealthController {
 
     @Value("${spring.application.name:internship-placement-tracker}")
-    private String applicationName;
+    private String applicationName = "internship-placement-tracker";
 
     @Value("${spring.profiles.active:dev}")
-    private String activeProfile;
+    private String activeProfile = "dev";
 
     @GetMapping("/health")
     public ResponseEntity<ApiResponse<Map<String, Object>>> getHealthStatus() {
